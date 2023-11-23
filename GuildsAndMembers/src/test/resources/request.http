@@ -1,0 +1,64 @@
+# Member
+
+### List all members
+GET http://localhost:8080/api/members
+
+### Create a member
+POST http://localhost:8080/api/members
+Content-Type: application/json
+
+{
+  "name": "Sonic",
+  "role": "mage",
+  "guildId": "7277f0f8-9eab-44ce-9e1d-84247d575805"
+}
+
+### Get member by id
+GET http://localhost:8080/api/members/63ad8562-781e-474d-9c86-80ad8fb7b940
+
+### Update member
+PUT http://localhost:8080/api/members/a6abb353-824a-4e4d-89cf-6130366a588f
+Content-Type: application/json
+
+{
+  "id": "a6abb353-824a-4e4d-89cf-6130366a588f",
+  "name": "GeneralCabbage",
+  "role": "Warrior",
+  "guildId": "26d43ba3-4d35-4f52-ba20-49c01b02c2a6"
+}
+
+### Delete member
+DELETE http://localhost:8080/api/members/a6abb353-824a-4e4d-89cf-6130366a588f
+
+
+# Guild
+
+### List all guilds
+GET http://localhost:8080/api/guilds
+
+### Create guild
+POST http://localhost:8080/api/guilds
+Content-Type: application/json
+
+{
+  "name": "AnonymousRappers",
+  "region": "US",
+  "creationYear": 2020
+}
+
+### Get guild by id
+GET http://localhost:8080/api/guilds/4e24fb87-2b1f-4af6-906f-d56a37bf84f1
+
+### Update guild
+PUT http://localhost:8080/api/guilds/b2de1a5e-636b-4408-b8cf-c20c407ea5f3
+Content-Type: application/json
+
+{
+  "id": "b2de1a5e-636b-4408-b8cf-c20c407ea5f3",
+  "name": "Grandpas",
+  "region": "US",
+  "creationYear": 2020
+}
+
+### Delete guild
+DELETE http://localhost:8080/api/guilds/4e24fb87-2b1f-4af6-906f-d56a37bf84f1
