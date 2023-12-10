@@ -1,7 +1,5 @@
 package BB.GuildsAndMembers.service;
 
-import BB.GuildsAndMembers.dto.GuildCollectionDto;
-import BB.GuildsAndMembers.dto.GuildDto;
 import BB.GuildsAndMembers.entity.Guild;
 import BB.GuildsAndMembers.repository.GuildRepository;
 import org.springframework.beans.factory.annotation.Autowired;

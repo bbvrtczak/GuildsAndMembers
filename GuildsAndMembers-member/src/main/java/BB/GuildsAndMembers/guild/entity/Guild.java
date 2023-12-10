@@ -39,7 +39,7 @@ public class Guild implements Serializable {
     /**
      * List of members. By default, list of members is not loaded from the database.
      */
-    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "guild", cascade = CascadeType.REMOVE)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private List<Member> members;
