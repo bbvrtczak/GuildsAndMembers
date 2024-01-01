@@ -1,6 +1,7 @@
 package BB.GuildsAndMembers.service;
 
 import BB.GuildsAndMembers.entity.Guild;
+import BB.GuildsAndMembers.event.api.GuildEventRepository;
 import BB.GuildsAndMembers.repository.GuildRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,10 +16,13 @@ import java.util.stream.Collectors;
 @ComponentScan("BB.GuildsAndMembers.repository")
 public class GuildService {
     private final GuildRepository repository;
+    private final GuildEventRepository eventRepository;
 
     @Autowired
-    public GuildService(GuildRepository guildRepository){
+    public GuildService(GuildRepository guildRepository,
+                        GuildEventRepository eventRepository){
         this.repository = guildRepository;
+        this.eventRepository = eventRepository;
     }
 
     public List<Guild> findAll() {
@@ -39,5 +43,6 @@ public class GuildService {
 
     public void delete(UUID id){
         repository.findById(id).ifPresent(repository::delete);
+        eventRepository.delete(id);
     }
 }

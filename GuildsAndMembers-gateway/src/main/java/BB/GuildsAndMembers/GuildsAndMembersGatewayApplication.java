@@ -17,29 +17,37 @@ public class GuildsAndMembersGatewayApplication {
 	@Bean
 	public RouteLocator routeLocator(
 			RouteLocatorBuilder builder,
-			@Value("${gm.member.url}") String memberUrl,
 			@Value("${gm.guild.url}") String guildUrl,
+			@Value("${gm.member.url}") String memberUrl,
+			//@Value("${rpg.user.url}") String userUrl,
 			@Value("${gm.gateway.host}") String host
-	){
+	) {
 		return builder
 				.routes()
 				.route("guilds", route -> route
-						.host(host)
-						.and()
 						.path(
 								"/api/guilds/{uuid}",
 								"/api/guilds"
 						)
 						.uri(guildUrl)
 				)
+//				.route("professions", route -> route
+//						.host(host)
+//						.and()
+//						.path(
+//								"/api/professions/{uuid}",
+//								"/api/professions"
+//						)
+//						.uri(professionUrl)
+//				)
 				.route("members", route -> route
-						.host(host)
-						.and()
 						.path(
 								"/api/members",
-								"/api/members/**",
-								"/api/guilds/{uuid}/members",
-								"/api/guilds/{uuid}/members/**"
+								"/api/members/**"
+//								"/api/users/{uuid}/characters",
+//								"/api/users/{uuid}/characters/**",
+//								"/api/professions/{uuid}/characters",
+//								"/api/professions/{uuid}/characters/**"
 						)
 						.uri(memberUrl)
 				)

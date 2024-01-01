@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 public interface GuildController {
-    @GetMapping("api/users")
+    @GetMapping("api/guilds")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    GetGuildsResponse getUsers();
+    GetGuildsResponse getGuilds();
 
-    @GetMapping("/api/users/{id}")
+    @GetMapping("/api/guilds/{id}")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    GetGuildResponse getUser(
+    GetGuildResponse getGuild(
             @PathVariable("id")
             UUID id
     );
 
-    @DeleteMapping("/api/users/{id}")
+    @DeleteMapping("/api/guilds/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    void deleteUser(
+    void deleteGuild(
             @PathVariable("id")
             UUID id
     );

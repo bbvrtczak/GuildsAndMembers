@@ -14,7 +14,6 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/guilds")
 public class GuildDefaultController implements GuildController {
     private final GuildService service;
     private final GuildToResponseFunction guildToResponse;
@@ -30,19 +29,19 @@ public class GuildDefaultController implements GuildController {
         this.guildsToResponse = guildsToResponse;
     }
 
-    public GetGuildsResponse getUsers() {
+    public GetGuildsResponse getGuilds() {
         return guildsToResponse.apply(service.findAll());
     }
 
     @Override
-    public GetGuildResponse getUser(UUID id) {
+    public GetGuildResponse getGuild(UUID id) {
         return service.find(id)
                 .map(guildToResponse)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     @Override
-    public void deleteUser(UUID id) {
+    public void deleteGuild(UUID id) {
         service.find(id)
                 .ifPresentOrElse(
                         profession -> service.delete(id),
@@ -51,5 +50,4 @@ public class GuildDefaultController implements GuildController {
                         }
                 );
     }
-
 }

@@ -16,7 +16,6 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/members")
 public class MemberDefaultController implements MemberController {
     private final MemberService service;
     private final MemberToResponseFunction memberToResponse;

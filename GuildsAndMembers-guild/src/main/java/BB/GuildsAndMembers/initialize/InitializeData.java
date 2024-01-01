@@ -31,7 +31,7 @@ public class InitializeData implements InitializingBean {
                     .build();
 
             Guild RNGsquad = Guild.builder()
-                    .name("DungeonDonuts")
+                    .name("RNGSquad")
                     .region("EU")
                     .creationYear(2020)
                     .build();
