@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GuildsAndMembers-ng/Angular.iml" filepath="$PROJECT_DIR$/GuildsAndMembers-ng/Angular.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/GuildsAndMembers.iml" filepath="$PROJECT_DIR$/.idea/GuildsAndMembers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuildsAndMembers-ng/GuildsAndMembers-ng.iml" filepath="$PROJECT_DIR$/GuildsAndMembers-ng/GuildsAndMembers-ng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuildsAndMembers-member/Member.iml" filepath="$PROJECT_DIR$/GuildsAndMembers-member/Member.iml" />
     </modules>
   </component>
 </project>
