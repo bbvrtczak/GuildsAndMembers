@@ -1,1 +1,28 @@
-<p>member-list works!</p>
+<article class="text--justified">
+  <header><h2>Members</h2></header>
+
+  <table *ngIf="members">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let member of members.members">
+      <td>{{member.name}}</td>
+      <td>
+        <a [routerLink]="['/members', member.id]">View</a>
+      </td>
+      <td>
+        <a [routerLink]="['/members', member.id, 'edit']">Edit</a>
+      </td>
+      <td>
+        <button (click)="onDelete(member)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</article>

@@ -1,4 +1,5 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
+/* Defines the compiler options and settings for the TypeScript compiler, allowing developers to specify how TypeScript
+ code should be transpiled into JavaScript. To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {

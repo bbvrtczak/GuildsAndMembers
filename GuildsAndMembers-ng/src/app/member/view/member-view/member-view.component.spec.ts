@@ -8,7 +8,7 @@ describe('MemberViewComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MemberViewComponent]
+      declarations: [MemberViewComponent]
     });
     fixture = TestBed.createComponent(MemberViewComponent);
     component = fixture.componentInstance;

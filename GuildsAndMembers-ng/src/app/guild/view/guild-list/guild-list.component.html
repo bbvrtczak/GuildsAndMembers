@@ -1,1 +1,20 @@
-<p>guild-list works!</p>
+<article class="text--justified">
+  <header><h2>Guilds</h2></header>
+
+  <table *ngIf="guilds">
+    <thead>
+    <tr>
+      <th>Login</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let guild of guilds.guilds">
+      <td>{{guild.name}}</td>
+      <td>
+        <button (click)="onDelete(guild)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</article>
