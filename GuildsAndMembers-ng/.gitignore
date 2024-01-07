@@ -6,13 +6,13 @@
 /out-tsc
 /bazel-out
 
-# MacOS
-.DS_Store
-
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+
+# MacOS
+.DS_Store
 
 # IDEs and editors
 .idea/
