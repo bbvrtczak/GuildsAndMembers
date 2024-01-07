@@ -6,7 +6,7 @@ export interface Guild {
   /**
    * Unique id identifying guild.
    */
-  id: string;
+  guildId: string;
 
   /**
    * name of the guild.

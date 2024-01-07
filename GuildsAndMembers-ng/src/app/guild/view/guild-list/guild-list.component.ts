@@ -34,7 +34,7 @@ export class GuildListComponent implements OnInit {
    * @param guild guild to be removed
    */
   onDelete(guild: Guild): void {
-    this.service.deleteGuild(guild.id).subscribe(() => this.ngOnInit());
+    this.service.deleteGuild(guild.guildId).subscribe(() => this.ngOnInit());
   }
 
 }
