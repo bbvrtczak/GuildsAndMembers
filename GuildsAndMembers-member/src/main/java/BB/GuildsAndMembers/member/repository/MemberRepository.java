@@ -15,16 +15,5 @@ import java.util.*;
  */
 @Repository
 public interface MemberRepository extends JpaRepository<Member, UUID> {
-    @Query("select m from Member m where m.guild = :guild")
-    List<Member> findByGuild(@Param("guild") Guild guild);
-
-    @Modifying
-    @Query("delete from Member m where m.memberId = :id")
-    void deleteById(@Param("id") UUID id);
-
-    @Query("select m from Member m where m.memberId = :id")
-    Optional<Member> findById(@Param("id") UUID id);
-
-    @Query("select m from Member m")
-    List<Member> findAll();
+    List<Member> findByGuild(Guild guild);
 }

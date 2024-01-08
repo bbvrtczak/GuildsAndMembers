@@ -14,7 +14,7 @@ public class MemberToResponseFunction implements Function<Member, GetMemberRespo
                 .id(entity.getMemberId())
                 .name(entity.getName())
                 .role(entity.getRole())
-                .guildId(entity.getGuild().getId())
+//                .guildId(entity.getGuild().getId())
                 .build();
     }
 }

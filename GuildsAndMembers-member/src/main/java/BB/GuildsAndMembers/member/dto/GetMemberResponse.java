@@ -22,5 +22,5 @@ public class GetMemberResponse {
     private UUID id;
     private String name;
     private String role;
-    private UUID guildId;
+    //private UUID guildId;
 }
