@@ -6,18 +6,6 @@ GET http://localhost:8084/api/members
 
 GET http://localhost:8084/api/guilds
 
-### Get all members (member)
+### Get member
 
-GET http://localhost:8082/api/members
-
-### Get all guilds (guild)
-
-GET http://localhost:8081/api/guilds
-
-### Delete guild
-
-DELETE http://localhost:8081/api/guilds/89776d34-c8f5-47cf-b6d5-8be8ecc548d2
-
-### Delete member
-
-DELETE http://localhost:8082/api/members/881856a2-02fa-4775-b2f6-951e7ca19308
+GET http://localhost:8082/api/members/c47f02c3-2ad0-409f-9999-abce2c506bd2

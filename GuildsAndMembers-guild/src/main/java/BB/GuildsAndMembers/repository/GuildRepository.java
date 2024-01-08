@@ -14,17 +14,5 @@ import java.util.*;
  */
 @Repository
 public interface GuildRepository extends JpaRepository<Guild, UUID> {
-
-    @Query("select g from Guild g")
-    List<Guild> findAll();
-
-    @Query("select g from Guild g where g.guildId = :id")
-    Optional<Guild> findById(@Param("id") UUID id);
-
-    @Modifying
-    @Query("delete from Guild g where g.guildId = :id")
-    void deleteById(@Param("id") UUID id);
-
-    @Query("select g from Guild g where g.name like :name")
-    Optional<Guild> findByName(@Param("name") String name);
+    Optional<Guild> findByName(String name);
 }
