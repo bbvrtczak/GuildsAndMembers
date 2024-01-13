@@ -15,7 +15,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-@ComponentScan("BB.GuildsAndMembers.repository")
+//@ComponentScan("BB.GuildsAndMembers.repository")
 public class MemberService {
     private final MemberRepository memberRepository;
     private final GuildRepository guildRepository;

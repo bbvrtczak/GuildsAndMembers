@@ -13,7 +13,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-@ComponentScan("BB.GuildsAndMembers.repository")
+//@ComponentScan("BB.GuildsAndMembers.repository")
 public class GuildService {
     private final GuildRepository repository;
     private final GuildEventRepository eventRepository;

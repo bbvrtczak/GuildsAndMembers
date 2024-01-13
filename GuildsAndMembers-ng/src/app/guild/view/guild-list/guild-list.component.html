@@ -8,11 +8,11 @@
       <th>Delete</th>
     </tr>
     </thead>
-    <tbody>a
+    <tbody>
     <tr *ngFor="let guild of guilds.guilds">
       <td>{{guild.name}}</td>
       <td>
-        <button (click)="onDelete(guild)">Delete</button>
+        <button (click)="onDelete(guild.id)">Delete</button>
       </td>
     </tr>
     </tbody>

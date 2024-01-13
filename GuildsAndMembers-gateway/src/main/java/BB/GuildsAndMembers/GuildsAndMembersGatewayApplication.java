@@ -38,23 +38,12 @@ public class GuildsAndMembersGatewayApplication {
 						)
 						.uri(guildUrl)
 				)
-//				.route("professions", route -> route
-//						.host(host)
-//						.and()
-//						.path(
-//								"/api/professions/{uuid}",
-//								"/api/professions"
-//						)
-//						.uri(professionUrl)
-//				)
 				.route("members", route -> route
 						.path(
 								"/api/members",
-								"/api/members/**"
-//								"/api/users/{uuid}/characters",
-//								"/api/users/{uuid}/characters/**",
-//								"/api/professions/{uuid}/characters",
-//								"/api/professions/{uuid}/characters/**"
+								"/api/members/**",
+								"/api/guilds/{uuid}/members",
+								"/api/guilds/{uuid}/members/**"
 						)
 						.uri(memberUrl)
 				)

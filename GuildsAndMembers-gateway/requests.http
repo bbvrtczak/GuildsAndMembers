@@ -1,11 +1,19 @@
-### Get all members (gateway)
+### Get all members
 
 GET http://localhost:8084/api/members
 
-### Get all guilds (gateway)
+### Get all guilds
 
 GET http://localhost:8084/api/guilds
 
 ### Get member
 
-GET http://localhost:8082/api/members/c47f02c3-2ad0-409f-9999-abce2c506bd2
+GET http://localhost:8084/api/members/f08ef7e3-7f2a-4378-b1fb-2922d730c70d
+
+### Delete RNGSquad guild
+
+DELETE http://localhost:8084/api/guilds/ed6cfb2a-cad7-47dd-9b56-9d1e3c7a4197
+
+### Delete DungeonDonuts guild
+
+DELETE http://localhost:8084/api/guilds/81e1c2a9-7f57-439b-b53d-6db88b071e4e

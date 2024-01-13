@@ -31,10 +31,10 @@ export class GuildListComponent implements OnInit {
   /**
    * Deletes selected guild.
    *
-   * @param guild guild to be removed
+   * @param guildId guild to be removed
    */
-  onDelete(guild: Guild): void {
-    this.service.deleteGuild(guild.guildId).subscribe(() => this.ngOnInit());
+  onDelete(guildId: string): void {
+    this.service.deleteGuild(guildId).subscribe(() => this.ngOnInit());
   }
 
 }

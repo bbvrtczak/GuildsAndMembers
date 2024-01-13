@@ -57,6 +57,7 @@ public class MemberDefaultController implements MemberController {
         service.create(requestToMember.apply(id, request));
     }
 
+
     @Override
     public void deleteMember(UUID id) {
         service.find(id)
