@@ -12,6 +12,9 @@
     <tr *ngFor="let guild of guilds.guilds">
       <td>{{guild.name}}</td>
       <td>
+        <a [routerLink]="['/guilds', guild.id]">View</a>
+      </td>
+      <td>
         <button (click)="onDelete(guild.id)">Delete</button>
       </td>
     </tr>

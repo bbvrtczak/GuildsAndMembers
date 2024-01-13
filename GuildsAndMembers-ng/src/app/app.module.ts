@@ -15,6 +15,7 @@ import { MemberService } from './member/service/member.service';
 import { MemberViewComponent } from './member/view/member-view/member-view.component';
 import { MemberEditComponent } from './member/view/member-edit/member-edit.component';
 import { FormsModule } from "@angular/forms";
+import {GuildViewComponent} from "./guild/view/guild-view/guild-view.component";
 
 /**
  * Application main module.
@@ -27,6 +28,7 @@ import { FormsModule } from "@angular/forms";
     NavComponent,
     MainComponent,
     GuildListComponent,
+    GuildViewComponent,
     MemberListComponent,
     MemberViewComponent,
     MemberEditComponent

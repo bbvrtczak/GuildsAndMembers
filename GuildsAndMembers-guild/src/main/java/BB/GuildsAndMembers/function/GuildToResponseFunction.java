@@ -14,7 +14,7 @@ public class GuildToResponseFunction implements Function<Guild, GetGuildResponse
         return GetGuildResponse.builder()
                 .id(guild.getGuildId())
                 .name(guild.getName())
-                .region(guild.getName())
+                .region(guild.getRegion())
                 .creationYear(guild.getCreationYear())
                 .build();
     }

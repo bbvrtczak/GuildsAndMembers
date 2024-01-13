@@ -1,0 +1,58 @@
+<article *ngIf="guild">
+  <header><h2>{{guild.name}}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            Name
+          </div>
+          <div class="col-6">
+            <span>{{guild.name}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Region
+          </div>
+          <div class="col-6">
+            <span>{{guild.region}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Creation year
+          </div>
+          <div class="col-6">
+            <span>{{guild.creationYear}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table *ngIf="members">
+    <thead>
+    <tr>
+      <th>Login</th>
+      <th>View</th>   <!--????-->
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let member of members.members">
+      <td>{{member.name}}</td>
+      <td>
+        <a [routerLink]="['/members', member.id]">View</a>
+      </td>
+      <td>
+        <button (click)="onDelete(member.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</article>
