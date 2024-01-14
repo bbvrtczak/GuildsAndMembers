@@ -3,19 +3,21 @@
 
   <table *ngIf="guilds">
     <thead>
-    <tr>
-      <th>Login</th>
-      <th>Delete</th>
-    </tr>
+<!--    <tr>-->
+<!--      <th>Login</th>-->
+<!--      <th>Delete</th>-->
+<!--    </tr>-->
     </thead>
     <tbody>
     <tr *ngFor="let guild of guilds.guilds">
       <td>{{guild.name}}</td>
       <td>
-        <a [routerLink]="['/guilds', guild.id]">View</a>
+        <a [routerLink]="['/guilds', guild.id]">
+          <button class="button-30">View</button>
+        </a>
       </td>
       <td>
-        <button (click)="onDelete(guild.id)">Delete</button>
+        <button class="button-30" (click)="onDelete(guild.id)">Delete</button>
       </td>
     </tr>
     </tbody>

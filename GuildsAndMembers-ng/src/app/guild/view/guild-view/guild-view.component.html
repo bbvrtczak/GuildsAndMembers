@@ -2,54 +2,32 @@
   <header><h2>{{guild.name}}</h2></header>
 
   <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="row mb-2">
-          <div class="col-6">
-            Name
-          </div>
-          <div class="col-6">
-            <span>{{guild.name}}</span>
-          </div>
-        </div>
+    <div class="col">
+      <h3>Name: <span>{{guild.name}}</span></h3>
+    </div>
 
-        <div class="row mb-2">
-          <div class="col-6">
-            Region
-          </div>
-          <div class="col-6">
-            <span>{{guild.region}}</span>
-          </div>
-        </div>
+    <div class="col">
+      <h3>Region: <span>{{guild.region}}</span></h3>
+    </div>
 
-        <div class="row mb-2">
-          <div class="col-6">
-            Creation year
-          </div>
-          <div class="col-6">
-            <span>{{guild.creationYear}}</span>
-          </div>
-        </div>
-      </div>
+    <div class="col">
+      <h3>Creation year: <span>{{guild.creationYear}}</span></h3>
     </div>
   </div>
 
+  <h4>Members:</h4>
+
   <table *ngIf="members">
-    <thead>
-    <tr>
-      <th>Login</th>
-      <th>View</th>   <!--????-->
-      <th>Delete</th>
-    </tr>
-    </thead>
     <tbody>
     <tr *ngFor="let member of members.members">
       <td>{{member.name}}</td>
       <td>
-        <a [routerLink]="['/members', member.id]">View</a>
+        <a [routerLink]="['/members', member.id]">
+          <button class="button-30">View</button>
+        </a>
       </td>
       <td>
-        <button (click)="onDelete(member.id)">Delete</button>
+        <button class="button-30" (click)="onDelete(member.id)">Delete</button>
       </td>
     </tr>
     </tbody>

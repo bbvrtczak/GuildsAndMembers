@@ -2,25 +2,22 @@
   <header><h2>Members</h2></header>
 
   <table *ngIf="members">
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th>View</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    </tr>
-    </thead>
+
     <tbody>
     <tr *ngFor="let member of members.members">
       <td>{{member.name}}</td>
       <td>
-        <a [routerLink]="['/members', member.id]">View</a>
+        <a [routerLink]="['/members', member.id]">
+          <button class="button-30">View</button>
+        </a>
       </td>
       <td>
-        <a [routerLink]="['/members', member.id, 'edit']">Edit</a>
+        <a [routerLink]="['/members', member.id, 'edit']">
+          <button class="button-30">Edit</button>
+        </a>
       </td>
       <td>
-        <button (click)="onDelete(member)">Delete</button>
+        <button class="button-30" (click)="onDelete(member)">Delete</button>
       </td>
     </tr>
     </tbody>

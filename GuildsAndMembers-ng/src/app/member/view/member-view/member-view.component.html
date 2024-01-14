@@ -2,27 +2,13 @@
   <header><h2>{{member.name}}</h2></header>
 
   <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="row mb-2">
-          <div class="col-6">
-            Name
-          </div>
-          <div class="col-6">
-            <span>{{member.name}}</span>
-          </div>
-        </div>
-
-        <div class="row mb-2">
-          <div class="col-6">
-            Role
-          </div>
-          <div class="col-6">
-            <span>{{member.role}}</span>
-          </div>
-        </div>
-      </div>
+    <div class="col">
+      <h3>Name: <span>{{member.name}}</span></h3>
     </div>
-  </div>
+
+    <div class="col">
+      <h3>Role: <span>{{member.role}}</span></h3>
+    </div>
+</div>
 
 </article>

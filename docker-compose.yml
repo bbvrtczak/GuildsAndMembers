@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  GuildsAndMembers-member:
+    image: membergnm
+    restart: always
+
+  GuildsAndMembers-guild:
+    image: guildgnm
+    restart: always
+    environment:
+      GM_MEMBER_URL: "http://GuildsAndMembers-member:8080"
+
+  GuildsAndMembers-gateway:
+    image: gatewaygnm
+    restart: always
+    environment:
+      GM_MEMBER_URL: "http://GuildsAndMembers-member:8080"
+      GM_GUILD_URL: "http://GuildsAndMembers-guild:8080"
+      RPG_GATEWAY_HOST: "GuildsAndMembers-gateway:8080"
+
+  GuildsAndMembers-ng:
+    image: angulargnm
+    restart: always
+    environment:
+      API_URL: http://GuildsAndMembers-gateway:8080/api
+    ports:
+      - "8087:80"

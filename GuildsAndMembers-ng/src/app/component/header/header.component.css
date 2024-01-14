@@ -1,0 +1,15 @@
+h1{
+  font-size: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color:#FCFCFD
+}
+
+header {
+  height:110px;
+  margin:0 auto;
+  background:#21628c;
+  font-family:arial;
+  text-transform:uppercase;
+}
